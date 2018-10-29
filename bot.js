@@ -6,6 +6,9 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+    if (message.content === '.guedes') {
+    	message.channel.send('guedes escuta sertanejo e menospreza outros estilos musicais');
+  	}
     if (message.content === '.top') {
     	message.channel.send('topper');
   	}
