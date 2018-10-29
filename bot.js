@@ -33,10 +33,12 @@ client.on('message', message => {
     if (message.content === prefix+'avatar') {
 	message.reply(message.author.avatarURL);
     	}
-	if (message.content === prefix+'imagem') {
-	const attachment = new Attachment('https://i.imgur.com/3t5VF2K.jpg');
-	message.channel.send(attachment);
-	}
+	if (message.content === '!rip') {
+        // Create the attachment using Attachment
+        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
+        // Send the attachment in the message channel
+        message.channel.send(attachment);
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
