@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = '.';
 var frasesDoGuedes = ["eu demorei 18 anos pra pegar meu primeiro onibus",
 "escuto sertanejo toda hora pink floyd banda de viado, preto nao presta,  indio nao presta, o que presta é o pastor empresario trabalhadors",
 "com medo da nova era petista?",
@@ -17,19 +18,19 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === '.guedes') {
+    if (message.content === prefix+'guedes') {
     	message.channel.send(getRandomFrase());
   	}
-    if (message.content === '.top') {
+    if (message.content === prefix+'top') {
     	message.channel.send('topper');
   	}
-    if(message.content == ".ping"){ // Check if message is "!ping"
+    if(message.content == prefix+'ping'){ // Check if message is "!ping"
 			message.channel.send("Pinging ...") // Placeholder for pinging ... 
 			.then((msg) => { // Resolve promise
 				msg.edit("Ping: " + (Date.now() - msg.createdTimestamp)) // Edits message with current timestamp minus timestamp of message
 			});
 		}
-    if (message.content === '.avatar') {
+    if (message.content === prefix+'avatar') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
   }
