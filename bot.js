@@ -6,6 +6,9 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+    if (message.content === '.top') {
+    	message.channel.send('topper');
+  	}
     if (message.content === '.ping') {
     	message.channel.send('pong');
   	}
