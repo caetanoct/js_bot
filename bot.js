@@ -1,5 +1,5 @@
-const { Discord, RichEmbed, Attachment} = require('discord.js');
-const client = new Discord.Client();
+const {Client, RichEmbed} = require('discord.js');
+const client = new Client();
 const prefix = '.';
 var frasesDoGuedes = ["eu demorei 18 anos pra pegar meu primeiro onibus",
 "escuto sertanejo toda hora pink floyd banda de viado, preto nao presta,  indio nao presta, o que presta é o pastor empresario trabalhadors",
@@ -33,24 +33,6 @@ client.on('message', message => {
     if (message.content === prefix+'avatar') {
 	message.reply(message.author.avatarURL);
     	}
-if (message.content === prefix+'imagem') {
-        const attachment = new Attachment('https://i.imgur.com/lvhQano.jpg');
-        message.channel.send(attachment);
-    	}
-if (message.content === 'embed') {
-    // We can create embeds using the MessageEmbed constructor
-    // Read more about all that you can do with the constructor
-    // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
-    const embed = new RichEmbed()
-      // Set the title of the field
-      .setTitle('A embed')
-      // Set the color of the embed
-      .setColor(0xFF0000)
-      // Set the main content of the embed
-      .setDescription('hahaha');
-    // Send the embed to the same channel as the message
-    message.channel.send(embed);
-  }
 });
 
 client.login(process.env.BOT_TOKEN);
