@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const RichEmbed = require('discord.js');
 const prefix = '.';
 var frasesDoGuedes = ["eu demorei 18 anos pra pegar meu primeiro onibus",
 "escuto sertanejo toda hora pink floyd banda de viado, preto nao presta,  indio nao presta, o que presta é o pastor empresario trabalhadors",
@@ -18,6 +19,14 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+	if (message.content === prefix+'embed') {
+    	const embed = new RichEmbed()
+      .setTitle('A embed')
+      .setColor(0xFF0000)
+      .setDescription('Hello');
+    message.channel.send(embed);
+  }
+	
     if (message.content === prefix+'guedes') {
     	message.channel.send(getRandomFrase());
   	}
