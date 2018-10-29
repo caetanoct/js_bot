@@ -1,5 +1,5 @@
-const {Client, RichEmbed} = require('discord.js');
-const client = new Client();
+const Discord = require('discord.js');
+const client = new Discord.Client();
 const prefix = '.';
 var frasesDoGuedes = ["eu demorei 18 anos pra pegar meu primeiro onibus",
 "escuto sertanejo toda hora pink floyd banda de viado, preto nao presta,  indio nao presta, o que presta é o pastor empresario trabalhadors",
