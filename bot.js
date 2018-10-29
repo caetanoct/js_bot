@@ -25,15 +25,18 @@ client.on('message', message => {
     	message.channel.send('topper');
   	}
     if(message.content == prefix+'ping'){ // Check if message is "!ping"
-			message.channel.send("Pinging ...") // Placeholder for pinging ... 
-			.then((msg) => { // Resolve promise
-				msg.edit("Ping: " + (Date.now() - msg.createdTimestamp)) // Edits message with current timestamp minus timestamp of message
-			});
-		}
+	message.channel.send("Pinging ...") // Placeholder for pinging ... 
+	.then((msg) => { // Resolve promise
+		msg.edit("Ping: " + (Date.now() - msg.createdTimestamp)) // Edits message with current timestamp minus timestamp of message
+		});
+	}
     if (message.content === prefix+'avatar') {
-    // Send the user's avatar URL
-    message.reply(message.author.avatarURL);
-  }
+	message.reply(message.author.avatarURL);
+    	}
+	if (message.content === prefix+'imagem') {
+	const attachment = new Attachment('https://i.imgur.com/3t5VF2K.jpg');
+	message.channel.send(attachment);
+	}
 });
 
 client.login(process.env.BOT_TOKEN);
