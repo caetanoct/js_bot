@@ -6,9 +6,13 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
+    if (message.content === '.ping') {
     	message.reply('pong');
   	}
+    if (message.content === '.avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
