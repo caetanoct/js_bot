@@ -28,3 +28,4 @@ client.on('message', message => {
     message.channel.send(embed);
   }
 });
+client.login(process.env.BOT_TOKEN);
