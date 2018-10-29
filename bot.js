@@ -1,47 +1,30 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const RichEmbed = require('discord.js');
-const prefix = '.';
-var frasesDoGuedes = ["eu demorei 18 anos pra pegar meu primeiro onibus",
-"escuto sertanejo toda hora pink floyd banda de viado, preto nao presta,  indio nao presta, o que presta é o pastor empresario trabalhadors",
-"com medo da nova era petista?",
-"eu voto no bolsonaro porque apoio o discurso de odio contra as minorias",
-"chora esquerdalha",
-"olha pra mim faço eng civil na udesc"];
+const { Client, RichEmbed } = require('discord.js');
 
-function getRandomFrase(){
-	var randomNumber = Math.floor(Math.random()*frasesDoGuedes.length);
-	return frasesDoGuedes[randomNumber];	
-}
+// Create an instance of a Discord client
+const client = new Client();
 
+/**
+ * The ready event is vital, it means that only _after_ this will your bot start reacting to information
+ * received from Discord
+ */
 client.on('ready', () => {
-    console.log('ready!');
+  console.log('I am ready!');
 });
 
 client.on('message', message => {
-	if (message.content === prefix+'embed') {
-    	const embed = new RichEmbed()
-      .setTitle('A embed')
+  // If the message is "how to embed"
+  if (message.content === 'how to embed') {
+    // We can create embeds using the MessageEmbed constructor
+    // Read more about all that you can do with the constructor
+    // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
+    const embed = new RichEmbed()
+      // Set the title of the field
+      .setTitle('A slick little embed')
+      // Set the color of the embed
       .setColor(0xFF0000)
-      .setDescription('Hello');
+      // Set the main content of the embed
+      .setDescription('Hello, this is a slick embed!');
+    // Send the embed to the same channel as the message
     message.channel.send(embed);
   }
-	
-    if (message.content === prefix+'guedes') {
-    	message.channel.send(getRandomFrase());
-  	}
-    if (message.content === prefix+'top') {
-    	message.channel.send('topper');
-  	}
-    if(message.content == prefix+'ping'){ // Check if message is "!ping"
-	message.channel.send("Pinging ...") // Placeholder for pinging ... 
-	.then((msg) => { // Resolve promise
-		msg.edit("Ping: " + (Date.now() - msg.createdTimestamp)) // Edits message with current timestamp minus timestamp of message
-		});
-	}
-    if (message.content === prefix+'avatar') {
-	message.reply(message.author.avatarURL);
-    	}
 });
-
-client.login(process.env.BOT_TOKEN);
