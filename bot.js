@@ -1,27 +1,38 @@
-// Extract the required classes from the discord.js module
-const { Client, Attachment } = require('discord.js');
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const prefix = '.';
+var frasesDoGuedes = ["eu demorei 18 anos pra pegar meu primeiro onibus",
+"escuto sertanejo toda hora pink floyd banda de viado, preto nao presta,  indio nao presta, o que presta é o pastor empresario trabalhadors",
+"com medo da nova era petista?",
+"eu voto no bolsonaro porque apoio o discurso de odio contra as minorias",
+"chora esquerdalha",
+"olha pra mim faço eng civil na udesc"];
 
-// Create an instance of a Discord client
-const client = new Client();
+function getRandomFrase(){
+	var randomNumber = Math.floor(Math.random()*frasesDoGuedes.length);
+	return frasesDoGuedes[randomNumber];	
+}
 
-/**
- * The ready event is vital, it means that only _after_ this will your bot start reacting to information
- * received from Discord
- */
 client.on('ready', () => {
-  console.log('I am ready!');
+    console.log('ready!');
 });
 
 client.on('message', message => {
-    // If the message is '!rip'
-    if (message.content === '!rip') {
-        // Create the attachment using Attachment
-        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
-        // Send the attachment in the message channel
-        message.channel.send(attachment);
-    }
+    if (message.content === prefix+'guedes') {
+    	message.channel.send(getRandomFrase());
+  	}
+    if (message.content === prefix+'top') {
+    	message.channel.send('topper');
+  	}
+    if(message.content == prefix+'ping'){ // Check if message is "!ping"
+	message.channel.send("Pinging ...") // Placeholder for pinging ... 
+	.then((msg) => { // Resolve promise
+		msg.edit("Ping: " + (Date.now() - msg.createdTimestamp)) // Edits message with current timestamp minus timestamp of message
+		});
+	}
+    if (message.content === prefix+'avatar') {
+	message.reply(message.author.avatarURL);
+    	}
 });
-
-// Log our bot in using the token from https://discordapp.com/developers/applications/me
 
 client.login(process.env.BOT_TOKEN);
