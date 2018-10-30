@@ -24,7 +24,7 @@ client.on('message', message => {
     if (message.content === prefix+'top') {
     	message.channel.send('topper');
   	}
-    if(message.content == prefix+'ping'){ // Check if message is "!ping"
+    if(message.content == prefix+'ping'){ 
 	message.channel.send("Pinging ...") // Placeholder for pinging ... 
 	.then((msg) => { // Resolve promise
 		msg.edit("Ping: " + (Date.now() - msg.createdTimestamp)) // Edits message with current timestamp minus timestamp of message
