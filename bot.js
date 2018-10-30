@@ -24,6 +24,16 @@ client.on('message', message => {
   if (message.content === prefix+'ping') {
     message.channel.send('pong');
   }
+	if (message.content === prefix+'guedes') {
+    	message.channel.send(getRandomFrase());
+  	}
+    if (message.content === prefix+'top') {
+    	message.channel.send('topper');
+  	}
+   
+    if (message.content === prefix+'avatar') {
+	message.reply(message.author.avatarURL);
+    	}
 });
 
 
