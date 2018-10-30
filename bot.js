@@ -11,7 +11,6 @@ const client = new Client();
 client.on('ready', () => {
   console.log('I am ready!');
 });
-
 client.on('message', message => {
     // If the message is '!rip'
     if (message.content === '!rip') {
