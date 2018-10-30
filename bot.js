@@ -38,8 +38,8 @@ client.on('message', message => {
 		message.channel.send(stringSaida);
 	}
 	if(message.content === prefix+'img'){
-		message.channel.send("Uma imagem:", {
-			file: ['https://i.imgur.com/nyljaMX.png']
+		message.channel.send("Uma imagem:",{
+			files: ['https://i.imgur.com/nyljaMX.png']
 		  })
 	}
 });
