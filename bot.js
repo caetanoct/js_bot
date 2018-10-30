@@ -1,38 +1,29 @@
+/**
+ * A ping pong bot, whenever you send "ping", it replies "pong".
+ */
+
+// Import the discord.js module
 const Discord = require('discord.js');
+
+// Create an instance of a Discord client
 const client = new Discord.Client();
-const prefix = '.';
-var frasesDoGuedes = ["eu demorei 18 anos pra pegar meu primeiro onibus",
-"escuto sertanejo toda hora pink floyd banda de viado, preto nao presta,  indio nao presta, o que presta é o pastor empresario trabalhadors",
-"com medo da nova era petista?",
-"eu voto no bolsonaro porque apoio o discurso de odio contra as minorias",
-"chora esquerdalha",
-"olha pra mim faço eng civil na udesc"];
 
-function getRandomFrase(){
-	var randomNumber = Math.floor(Math.random()*frasesDoGuedes.length);
-	return frasesDoGuedes[randomNumber];	
-}
-
+/**
+ * The ready event is vital, it means that only _after_ this will your bot start reacting to information
+ * received from Discord
+ */
 client.on('ready', () => {
-    console.log('ready!');
+  console.log('I am ready!');
 });
 
+// Create an event listener for messages
 client.on('message', message => {
-    if (message.content === prefix+'guedes') {
-    	message.channel.send(getRandomFrase());
-  	}
-    if (message.content === prefix+'top') {
-    	message.channel.send('topper');
-  	}
-    if(message.content == prefix+'ping'){ 
-	message.channel.send("Pinging ...") // Placeholder for pinging ... 
-	.then((msg) => { // Resolve promise
-		msg.edit("Ping: " + (Date.now() - msg.createdTimestamp)) // Edits message with current timestamp minus timestamp of message
-		});
-	}
-    if (message.content === prefix+'avatar') {
-	message.reply(message.author.avatarURL);
-    	}
+  // If the message is "ping"
+  if (message.content === 'ping') {
+    // Send "pong" to the same channel
+    message.channel.send('pong');
+  }
 });
+
 
 client.login(process.env.BOT_TOKEN);
