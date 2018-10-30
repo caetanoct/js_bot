@@ -32,6 +32,10 @@ client.on('message', message => {
 	}
     if (message.content === prefix+'avatar') {
 	message.reply(message.author.avatarURL);
-    	}
+		}
+	if(message.content === prefix+'comandos'){
+		var stringSaida = ".guedes \n.top\n.ping\n.avatar"
+		message.channel.send(stringSaida);
+	}
 });
 client.login(process.env.BOT_TOKEN);
