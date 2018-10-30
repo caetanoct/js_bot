@@ -34,8 +34,13 @@ client.on('message', message => {
 	message.reply(message.author.avatarURL);
 		}
 	if(message.content === prefix+'comandos'){
-		var stringSaida = ".guedes \n.top\n.ping\n.avatar"
+		var stringSaida = "Comandos disponíveis:\n.guedes \n.top\n.ping\n.avatar"
 		message.channel.send(stringSaida);
+	}
+	if(message.content === prefix+'img'){
+		message.channel.send({
+			files: ['https://i.imgur.com/w3duR07.png%27']
+		  })
 	}
 });
 client.login(process.env.BOT_TOKEN);
