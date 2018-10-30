@@ -1,26 +1,27 @@
-/**
- * A ping pong bot, whenever you send "ping", it replies "pong".
- */
 
-// Import the discord.js module
 const Discord = require('discord.js');
 
-// Create an instance of a Discord client
-const client = new Discord.Client();
 
-/**
- * The ready event is vital, it means that only _after_ this will your bot start reacting to information
- * received from Discord
- */
+const client = new Discord.Client();
+const prefix = '.';
+var frasesDoGuedes = ["eu demorei 18 anos pra pegar meu primeiro onibus",
+"escuto sertanejo toda hora pink floyd banda de viado, preto nao presta,  indio nao presta, o que presta é o pastor empresario trabalhadors",
+"com medo da nova era petista?",
+"eu voto no bolsonaro porque apoio o discurso de odio contra as minorias",
+"chora esquerdalha",
+"olha pra mim faço eng civil na udesc"];
+
+function getRandomFrase(){
+	var randomNumber = Math.floor(Math.random()*frasesDoGuedes.length);
+	return frasesDoGuedes[randomNumber];	
+}
+
 client.on('ready', () => {
   console.log('I am ready!');
 });
 
-// Create an event listener for messages
 client.on('message', message => {
-  // If the message is "ping"
-  if (message.content === 'ping') {
-    // Send "pong" to the same channel
+  if (message.content === prefix+'ping') {
     message.channel.send('pong');
   }
 });
