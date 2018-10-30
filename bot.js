@@ -17,7 +17,7 @@ function getRandomFrase(){
 }
 
 client.on('ready', () => {
-  console.log('I am ready!');
+  console.log('I am ready2');
 });
 
 client.on('message', message => {
