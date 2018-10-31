@@ -48,7 +48,7 @@ var perguntasEmString = "";
 for(i = 0 ; i < perguntas.length; i++) {
 	perguntasEmString += perguntas[i]+"\n";
 }
-console.log(perguntasEmString);
+
 client.on('message', message => {
     if (message.content === prefix+'guedes') {
     	message.channel.send(getRandomFrase());
@@ -66,7 +66,7 @@ client.on('message', message => {
 	message.reply(message.author.avatarURL);
 		}
 	if(message.content === prefix+'comandos'){
-		var stringSaida = "Comandos disponíveis:\n.guedes \n.top\n.ping\n.avatar\n.img"
+		var stringSaida = "Comandos disponíveis:\n.guedes \n.top\n.ping\n.avatar\n.img\n.querosabermaissobreguedes\n.comandos"
 		message.channel.send(stringSaida);
 	}
 	if(message.content === prefix+'img'){
@@ -79,9 +79,7 @@ client.on('message', message => {
 		perguntaFlag = true;
 	}
 	if(perguntaFlag == true){
-		console.log("pergunta flag true");
-		console.log(message.content);
-		console.log(respostas[0]);
+
 		switch(message.content){
 			case '1':
 			message.channel.send(respostas[0]);
