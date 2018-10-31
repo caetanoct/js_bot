@@ -66,8 +66,14 @@ client.on('message', message => {
 	message.reply(message.author.avatarURL);
 		}
 	if(message.content === prefix+'comandos'){
-		var stringSaida = "Comandos disponíveis:\n.guedes \n.top\n.ping\n.avatar\n.img\n.querosabermaissobreguedes\n.comandos"
+		var stringSaida = "Comandos disponíveis:\n.guedes \n.top\n.ping\n.avatar\n.img\n.querosabermaissobreguedes\n.comandos\n.guedesepolitica\n.loren"
 		message.channel.send(stringSaida);
+	}
+	if(message.content === prefix+'guedesepolitica'){
+		message.channel.send("Guedes define sua posição política como conservador de direita neoliberal anarco-capitalista e afirma ser um jovem dinâmico.");
+	}
+	if(message.content === prefix+'loren'){
+		message.channel.send("oi loren");
 	}
 	if(message.content === prefix+'img'){
 		message.channel.send("Uma imagem do guedes fazendo cosplay de anime:",{
