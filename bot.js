@@ -7,7 +7,35 @@ var frasesDoGuedes = ["eu demorei 18 anos pra pegar meu primeiro onibus",
 "eu voto no bolsonaro porque apoio o discurso de odio contra as minorias",
 "chora esquerdalha",
 "olha pra mim faço eng civil na udesc"];
-
+var perguntaFlag = false;
+var perguntas = [
+	"1.Qual é o seu maior sonho?",
+	"2.Qual é o seu livro ou filme preferido e o que nele mais chamou a sua atenção?",
+	"3.Qual foi o acontecimento da sua vida que mais te marcou?",
+	"4.Você se considera uma pessoa feliz?",
+	"5.Qual era a sua profissão dos sonhos na infância?",
+	"6.Quando está sozinho (a) em casa sente liberdade ou solidão?",
+	"7.Se encontrasse uma mala de dinheiro em um local abandonado, entregaria para a polícia ou acredita no ditado – achado não é roubado?",
+	"8.Você prefere o dia ou a noite?",
+	"9.Se você pudesse ter uma conversa com qualquer pessoa, incluindo aquelas já falecidas, quem seria?",
+	"10.Se soubesse que tem apenas mais um dia de vida, o que faria?",
+	"11.Como escolheu a sua profissão? Se pudesse voltar no tempo acredita que faria a mesma escolha?",
+	"12.Para você, o que é o sucesso?",
+	"13.Quais são os pontos da sua personalidade que você acredita que precisem ser melhorados?"]
+var respostas = [
+	perguntas[0]+"\nGuedes: Trabalhar como imagineer na disney",		
+	perguntas[1]+"\nGuedes: Gran Torino, pois lembra o meu avô e também tem o Clint Eastwood",
+	perguntas[2]+"\nGuedes: Nascimento do meu irmão",
+	perguntas[3]+"\nGuedes: Muito feliz",
+	perguntas[4]+"\nGuedes: Medicina",
+	perguntas[5]+"\nGuedes: Liberdade",
+	perguntas[6]+"\nGuedes: Ficaria para mim",
+	perguntas[7]+"\nGuedes: Dia",
+	perguntas[8]+"\nGuedes: Clint Eastwood",
+	perguntas[9]+"\nGuedes: Passaria o dia com o meu irmão",
+	perguntas[10]+"\nGuedes: Era um curso de graça na udesc",
+	perguntas[11]+"\nGuedes: Conquista da Cisplatina em 1817",
+	perguntas[12]+"\nGuedes: Nenhum"];
 function getRandomFrase(){
 	var randomNumber = Math.floor(Math.random()*frasesDoGuedes.length);
 	return frasesDoGuedes[randomNumber];	
@@ -41,6 +69,55 @@ client.on('message', message => {
 		message.channel.send("Uma imagem:",{
 			files: ['https://i.imgur.com/nyljaMX.png']
 		  })
+	}
+	if(message.content === prefix+'querosabermaissobreguedes'){
+		
+		perguntaFlag = true;
+	}
+	if(perguntaFlag == true){
+		switch(message.content){
+			case '1':
+			message.channel.send(respostas[0]);
+			break;
+			case '2':
+			message.channel.send(respostas[1]);
+			break;
+			case '3':
+			message.channel.send(respostas[2]);
+			break;
+			case '4':
+			message.channel.send(respostas[3]);
+			break;
+			case '5':
+			message.channel.send(respostas[4]);
+			break;
+			case '6':
+			message.channel.send(respostas[5]);
+			break;
+			case '7':
+			message.channel.send(respostas[6]);
+			break;
+			case '8':
+			message.channel.send(respostas[7]);
+			break;
+			case '9':
+			message.channel.send(respostas[8]);
+			break;
+			case '10':
+			message.channel.send(respostas[9]);
+			break;
+			case '11':
+			message.channel.send(respostas[10]);
+			break;
+			case '12':
+			message.channel.send(respostas[11]);
+			break;
+			case '13':
+			message.channel.send(respostas[12]);
+			break;
+
+		}
+		perguntaFlag = false;
 	}
 });
 client.login(process.env.BOT_TOKEN);
