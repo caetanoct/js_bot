@@ -79,6 +79,7 @@ client.on('message', message => {
 		perguntaFlag = true;
 	}
 	if(perguntaFlag == true){
+		console.log("pergunta flag true");
 		switch(message.content){
 			case '1':
 			message.channel.send(respostas[0]);
