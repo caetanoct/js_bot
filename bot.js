@@ -85,46 +85,58 @@ client.on('message', message => {
 		switch(message.content){
 			case '1':
 			message.channel.send(respostas[0]);
+			perguntaFlag = false;
 			break;
 			case '2':
 			message.channel.send(respostas[1]);
+			perguntaFlag = false;
 			break;
 			case '3':
 			message.channel.send(respostas[2]);
+			perguntaFlag = false;
 			break;
 			case '4':
 			message.channel.send(respostas[3]);
+			perguntaFlag = false;
 			break;
 			case '5':
 			message.channel.send(respostas[4]);
+			perguntaFlag = false;
 			break;
 			case '6':
 			message.channel.send(respostas[5]);
+			perguntaFlag = false;
 			break;
 			case '7':
 			message.channel.send(respostas[6]);
+			perguntaFlag = false;
 			break;
 			case '8':
 			message.channel.send(respostas[7]);
+			perguntaFlag = false;
 			break;
 			case '9':
 			message.channel.send(respostas[8]);
+			perguntaFlag = false;
 			break;
 			case '10':
 			message.channel.send(respostas[9]);
+			perguntaFlag = false;
 			break;
 			case '11':
 			message.channel.send(respostas[10]);
+			perguntaFlag = false;
 			break;
 			case '12':
 			message.channel.send(respostas[11]);
+			perguntaFlag = false;
 			break;
 			case '13':
 			message.channel.send(respostas[12]);
+			perguntaFlag = false;
 			break;
 
 		}
-		perguntaFlag = false;
 	}
 });
 client.login(process.env.BOT_TOKEN);
