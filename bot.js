@@ -44,7 +44,11 @@ function getRandomFrase(){
 client.on('ready', () => {
     console.log('ready!');
 });
-
+var perguntasEmString = "";
+for(i = 0 ; i < perguntas.length; i++) {
+	perguntasEmString += perguntas[i]+"\n";
+}
+console.log(perguntasEmString);
 client.on('message', message => {
     if (message.content === prefix+'guedes') {
     	message.channel.send(getRandomFrase());
@@ -71,7 +75,7 @@ client.on('message', message => {
 		  })
 	}
 	if(message.content === prefix+'querosabermaissobreguedes'){
-		
+		message.channel.send(perguntasEmString+ "\nDigite o item que deseja obter uma resposta sobre Guedes");
 		perguntaFlag = true;
 	}
 	if(perguntaFlag == true){
