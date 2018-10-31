@@ -80,6 +80,8 @@ client.on('message', message => {
 	}
 	if(perguntaFlag == true){
 		console.log("pergunta flag true");
+		console.log(message.content);
+		console.log(respostas[0]);
 		switch(message.content){
 			case '1':
 			message.channel.send(respostas[0]);
