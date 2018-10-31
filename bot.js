@@ -70,8 +70,8 @@ client.on('message', message => {
 		message.channel.send(stringSaida);
 	}
 	if(message.content === prefix+'img'){
-		message.channel.send("Uma imagem:",{
-			files: ['https://i.imgur.com/nyljaMX.png']
+		message.channel.send("Uma imagem do guedes fazendo cosplay de anime:",{
+			files: ['https://i.imgur.com/wvgQ21T.jpg']
 		  })
 	}
 	if(message.content === prefix+'querosabermaissobreguedes'){
