@@ -84,6 +84,12 @@ client.on('message', message => {
 		message.channel.send(perguntasEmString+ "\nDigite o item que deseja obter uma resposta sobre Guedes");
 		perguntaFlag = true;
 	}
+	if(message.content === prefix+'ss'){
+		message.channel.send({embed: {
+			color: 3447003,
+			description: "A very simple Embed!"
+		  }});
+	}
 	if(perguntaFlag == true){
 
 		switch(message.content){
