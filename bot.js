@@ -3,10 +3,10 @@ const client = new Discord.Client();
 const prefix = '.';
 var frasesDoGuedes = ["eu demorei 18 anos pra pegar meu primeiro onibus",
 "escuto sertanejo toda hora pink floyd banda de viado, preto nao presta,  indio nao presta, o que presta é o pastor empresario trabalhadors",
-"com medo da nova era petista?",
-"eu voto no bolsonaro porque apoio o discurso de odio contra as minorias",
-"chora esquerdalha",
-"olha pra mim faço eng civil na udesc"];
+"eu parei de assistir american crime story pq tem gays",
+"eu votei no bolsonaro só porque apoio o discurso de odio contra as minorias fodase",
+"chora esquerdalha, to afim de viver um estilo de vida minimalista",
+"olha pra mim faço eng civil na udesc e tenho um apple watch"];
 var perguntaFlag = false;
 var perguntas = [
 	"1.Qual é o seu maior sonho?",
