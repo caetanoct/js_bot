@@ -90,6 +90,9 @@ client.on('message', message => {
 			description: "A very simple Embed!"
 		  }});
 	}
+	if (message.content === prefix+'burp') {
+    		message.channel.send("vou fumar maconha");
+  	}
 	if(perguntaFlag == true){
 
 		switch(message.content){
