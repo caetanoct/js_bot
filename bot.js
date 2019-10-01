@@ -53,6 +53,15 @@ client.on('message', message => {
     if (message.content === prefix+'guedes') {
     	message.channel.send(getRandomFrase());
   	}
+    if (message.content === prefix+'say') {
+	let stringSaida = message.content.split(" ");
+	var variavelSaida = "";
+	var i;
+	for (i = 1; i < stringSaida.length; i++) {
+  		variavelSaida += stringSaida[i] + " ";
+	}
+    	message.channel.send(variavelSaida);
+  	}
     if (message.content === prefix+'top') {
     	message.channel.send('topper');
   	}
