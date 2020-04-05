@@ -79,7 +79,7 @@ client.on('message', message => {
 		message.channel.send(stringSaida);
 	}
 	if(message.content === prefix+'guedesepolitica'){
-		message.channel.send("Guedes define sua posição política como conservador de direita neoliberal anarco-capitalista.");
+		message.channel.send("Guedes define sua posição política como cristao consevador de direita neoliberal neopentecostal.");
 	}
 	if(message.content === prefix+'loren'){
 		message.channel.send("oi loren");
