@@ -75,7 +75,7 @@ client.on('message', message => {
 	message.reply(message.author.avatarURL);
 		}
 	if(message.content === prefix+'comandos'){
-		var stringSaida = "Comandos disponíveis:\n.guedes \n.top\n.ping\n.avatar\n.img\n.querosabermaissobreguedes\n.comandos\n.guedesepolitica\n.loren"
+		var stringSaida = "Comandos disponíveis:\n.guedes \n.top\n.ping\n.avatar\n.img\n.querosabermaissobreguedes\n.comandos\n.guedesepolitica\n.burp\n.vinganca\n.frasedeefeito\n.loren"
 		message.channel.send(stringSaida);
 	}
 	if(message.content === prefix+'guedesepolitica'){
@@ -99,8 +99,14 @@ client.on('message', message => {
 			description: "vai se fode"
 		  }});
 	}
-	if (message.content === prefix+'burp') {
+	if (message.content === prefix+'frasedeefeito') {
+    		message.channel.send("Lembre-se de que há três coisas que todo sábio deve temer: o mar na tormenta, uma noite sem luar e a ira de um homem gentil.");
+  	}
+  	if (message.content === prefix+'burp') {
     		message.channel.send("vou fumar maconha");
+  	}
+  	if (message.content === prefix+'vinganca') {
+    		message.channel.send("A vingança eu deixo para Deus.");
   	}
 	if(perguntaFlag == true){
 
