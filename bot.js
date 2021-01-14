@@ -72,9 +72,12 @@ client.on("message", message => {
   }
 
   if (message.content === prefix + "comandosecreto") {
-    message.channel.send(
-      "Essa mensagem só é visível para aqueles que pagam a mensalidade, para visualizar entre em contato com Proletário Unido ou Smite"
-    );
+    message.channel.send({
+      embed: {
+        color: 15158332,
+        description: "Essa mensagem só é visível para aqueles que pagam a mensalidade, para visualizar entre em contato com Proletário Unido ou Smite"
+      }
+    });
   }
   if (message.content == prefix + "ping") {
     // Check if message is "!ping"
