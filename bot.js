@@ -112,7 +112,7 @@ client.on("message", message => {
   }
   if (message.content === prefix + "caiado") {
     message.channel.send("Uma verdade sobre o caiado e sobre o guedes", {
-      files: ["https://imgur.com/3OxyIxe"]
+      files: ["https://i.imgur.com/3OxyIxe.png"]
     });
   }
   if (message.content === prefix + "querosabermaissobreguedes") {
