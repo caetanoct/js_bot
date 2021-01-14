@@ -7,7 +7,7 @@ var frasesDoGuedes = [
   "eu parei de assistir american crime story pq tem gays",
   "eu votei no bolsonaro só porque apoio o discurso de odio contra as minorias fodase",
   "chora esquerdalha, to afim de viver um estilo de vida minimalista",
-  "olha pra mim faço eng civil na udesc e tenho um apple watch"
+  "olha pra mim faço engenharia da computaria na udeFODASSE e tenho um apple watch"
 ];
 var perguntaFlag = false;
 var perguntas = [
@@ -75,7 +75,8 @@ client.on("message", message => {
     message.channel.send({
       embed: {
         color: 15158332,
-        description: "Essa mensagem só é visível para aqueles que pagam a mensalidade, para visualizar entre em contato com Proletário Unido ou Smite"
+        description:
+          "Essa mensagem só é visível para aqueles que pagam a mensalidade, para visualizar entre em contato com Proletário Unido ou Smite"
       }
     });
   }
