@@ -110,6 +110,11 @@ client.on("message", message => {
       files: ["https://i.imgur.com/wvgQ21T.jpg"]
     });
   }
+  if (message.content === prefix + "caiado") {
+    message.channel.send("Uma verdade sobre o caiado e sobre o guedes", {
+      files: ["https://imgur.com/3OxyIxe"]
+    });
+  }
   if (message.content === prefix + "querosabermaissobreguedes") {
     message.channel.send(
       perguntasEmString +
