@@ -111,9 +111,12 @@ client.on("message", message => {
     });
   }
   if (message.content === prefix + "caiado") {
-    message.channel.send("Uma verdade sobre o caiado e sobre o guedes", {
-      files: ["https://i.imgur.com/3OxyIxe.png"]
-    });
+    message.channel.send(
+      "Uma verdade sobre o @guscaiado - segue lá e sobre o @jedes",
+      {
+        files: ["https://i.imgur.com/3OxyIxe.png"]
+      }
+    );
   }
   if (message.content === prefix + "querosabermaissobreguedes") {
     message.channel.send(
