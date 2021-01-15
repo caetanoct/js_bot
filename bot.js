@@ -76,7 +76,7 @@ client.on("message", message => {
       embed: {
         color: 15158332,
         description:
-          "Essa mensagem só é visível para aqueles que pagam a mensalidade, para visualizar entre em contato com Proletário Unido ou Smite"
+          "Essa mensagem só é visível para aqueles que pagam a mensalidade, para visualizar entre em contato com Proletário Unido ou Smite. Para mais informações consulte as mensagens fixadas."
       }
     });
   }
