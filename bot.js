@@ -3,9 +3,9 @@ const client = new Discord.Client();
 const prefix = ".";
 var frasesDoGuedes = [
   "eu demorei 18 anos pra pegar meu primeiro onibus",
-  "escuto sertanejo toda hora pink floyd banda de viado, o que presta é o pastor empresario trabalhadors",
-  "eu parei de assistir american crime story pq tem gays",
-  "eu votei no bolsonaro só porque apoio o discurso de odio contra as minorias fodase",
+  "escuto sertanejo toda hora pink floyd banda de boomer, o que presta é o pastor empresario trabalhadors",
+  "eu parei de assistir american crime story pq tem sangue e crimes!!!",
+  "eu votei no bolsonaro só porque eu sou otário e acreditei na baboseira q ele fala",
   "chora esquerdalha, to afim de viver um estilo de vida minimalista",
   "olha pra mim faço ciencia da computacao na udesc e tenho um apple watch"
 ];
