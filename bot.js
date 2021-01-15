@@ -141,7 +141,9 @@ client.on("message", message => {
     );
   }
   if (message.content === prefix + "burp") {
-    message.channel.send("vou fumar maconha");
+    message.channel.send(
+      "Eu amo a belinha, mas de verdade mesmo, amo o meu bong chamado marcelinho 420"
+    );
   }
   if (message.content === prefix + "vinganca") {
     message.channel.send("A vingança eu deixo para Deus.");
