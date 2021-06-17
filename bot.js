@@ -107,6 +107,11 @@ client.on("message", message => {
       "Olá, eu sou o loren me segue no instagram @henriquelorenzini e me da haxixe"
     );
   }
+
+  if (message.content === prefix + "isa") {
+    message.channel.send("Olá, eu sou a isa e sou melhor que o caiado no CS");
+  }
+
   if (message.content === prefix + "img") {
     message.channel.send("Uma imagem do guedes fazendo cosplay de anime:", {
       files: ["https://i.imgur.com/wvgQ21T.jpg"]
